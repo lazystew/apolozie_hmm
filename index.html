@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Truly Sorry</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "UXsVNt14OGggyP2L9",
+      });
+   })();
+</script>
+</head>
+<body>
+
+    <!-- Intro Section -->
+    <div class="section" id="intro">
+        <h1>I'm Really Sorry, My Angel 💔</h1>
+        <p>You mean the world to me, and I truly regret my mistake. Please click below to read my heartfelt apology.</p>
+        <button onclick="showNextSection('apology')">kuch bate</button>
+    </div>
+
+    <!-- Apology Section -->
+    <div class="section hidden" id="apology">
+        <h2>Nancy</h2>
+        <p>
+            <br>I’m deeply sorry for not being there when you needed me the most. Missing your calls and texts last night was never my intention. 
+            I understand how alone you must have felt, and it breaks my heart and i know that any amount of sorry can't pay it up i am too shameful of myself, i just can't face myself for what i have done.
+        </p>
+        <button onclick="showNextSection('memories')">something i wanna say</button>
+    </div>
+
+<!-- Memories Section with Palm Images -->
+<div class="section hidden" id="memories">
+    <h2>I LOVE YOU</h2>
+    <p><br>Every moment with you is a treasure. I cherish every smile, every laugh, and every memory we've created together.I wanna 
+        hold your hand forever,i will always take care of you.
+    </p>
+
+    <!-- Image Gallery: Palm Images -->
+    <div class="palm-images">
+        <img src="image\WhatsApp_Image_2024-02-08_at_23.58.51.webp" alt="Palm Image 1" class="palm-image">
+        <img src="image\rohithand.jpg" alt="Palm Image 2" class="palm-image">
+        
+    </div>
+
+    <button onclick="showNextSection('dedication')">Special </button>
+</div>
+
+
+    <!-- Dedication Section -->
+    <div class="section hidden" id="dedication">
+        <h2>A Special Message 💌<br></h2>
+        <blockquote>
+            <br>"You are my light in the darkest times, and I promise to hold your heart with care and love always."
+        </blockquote>
+        <button onclick="showNextSection('contact')">Reach Out to Me</button>
+    </div>
+
+    
+
+    <!-- Contact Section -->
+    <div class="section hidden" id="contact">
+        <!-- <h2>I’m Here to Listen 🌹</h2> -->
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="listen-section">
+            <h2>I am here to listen ❤️</h2>
+            <textarea id="messageInput" placeholder="Write your message here..."></textarea>
+            <button onclick="sendMessage()">Send Message</button>
+            <p id="statusMessage"></p>
+        </div>
+            <!-- <textarea placeholder="Your message..."></textarea> -->
+            <!-- <button type="submit">NEXT</button> -->
+        </form>
+        
+    </div>
+
+    <!-- Final Apology Note -->
+    <div class="section hidden" id="final-apology">
+        <h2>I'm So Sorry 💔</h2>
+        <p>
+            <br>No words can fully express how sorry I am. I will spend my life trying to make things right and show you how much you mean to me.
+        </p>
+        <button onclick="playSadSong()">Hmm</button>
+    </div>
+
+
+    <!-- Sad Animation and Music -->
+    <div class="hidden" id="sad-animation">
+        <h3>🎶 for My love... 🎶</h3>
+        <audio id="song" controls autoplay>
+            <source src="SOUND\elijah woods - everything everywhere always (official lyric video) - elijahwoodsVEVO (youtube).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="sad-animation">
+            <img src="image\famous-movie-couples-lara-jean-peter-to-all-the-boys-ive-loved-before-1671488194.avif" alt="Sad Animation">
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
